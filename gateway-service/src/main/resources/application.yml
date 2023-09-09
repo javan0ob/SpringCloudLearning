@@ -1,0 +1,13 @@
+server:
+  port: 6600
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: 111
+          uri: http://localhos:6600
+          predicates:
+            - Cookie=mycookie,mycookievalue
